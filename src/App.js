@@ -18,6 +18,14 @@ function App() {
           GOOGLE
         </a>
       </header>
+
+        <div className="Main-container">
+
+            Cleaning Schedule DATA
+
+
+        </div>
+
     </div>
   );
 }
