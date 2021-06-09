@@ -37,3 +37,11 @@
     transform: rotate(360deg);
   }
 }
+
+/* Below is the main body to display app data */
+
+.Main-container {
+  padding-top: 20px;
+}
+
+
