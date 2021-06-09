@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
+import UsersContainer from './components/UsersContainer.js';
+
 function App() {
   return (
     <div className="App">
@@ -23,6 +25,7 @@ function App() {
 
             Cleaning Schedule DATA
 
+            <UsersContainer />
 
         </div>
 
