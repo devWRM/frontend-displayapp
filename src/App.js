@@ -27,6 +27,15 @@ function App() {
 
             <UsersContainer />
 
+            {/* componentDidMount() {
+              fetch('http://localhost:3000/users', {
+                method: 'GET'
+              })
+              .then(response => response.json())
+              .then(usersData => console.log(usersData))
+            } */}
+
+
         </div>
 
     </div>
