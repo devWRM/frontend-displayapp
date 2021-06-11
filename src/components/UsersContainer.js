@@ -1,21 +1,31 @@
 import React from 'react';
 
+import { connect } from 'react-redux';
+
 import UsersList from './UsersList.js';
+import { fetchUsers } from '../actions/usersActions.js';
 
-function UsersContainer() {
+class UsersContainer extends React.Component {
 
-    return(
-        <div>
 
-            UsersContainer
+    componentDidMount() {
+        this.props.fetchUsers()
+    }
 
-            <UsersList />
+    render() {
+        return(
+            <div>
 
-        </div>
-    )
+                UsersContainer
+
+                <UsersList />
+
+            </div>
+        )
+    }
 
 }
 
-export default UsersContainer;
+export default connect(null, { fetchUsers })(UsersContainer);
 
 
