@@ -23,7 +23,7 @@ function App() {
 
         <div className="Main-container">
 
-            Cleaning Schedule DATA
+            
 
             <UsersContainer />
 
