@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-
+// import { connect } from 'react-redux';
 
 import SchedulesList from './SchedulesList';
 
@@ -16,5 +16,7 @@ class SchedulesContainer extends Component {
         )
     }
 }
+
+
 
 export default SchedulesContainer;
