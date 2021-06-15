@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import UsersContainer from './components/UsersContainer.js';
+import SchedulesContainer from './components/SchedulesContainer.js';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             
 
             <UsersContainer />
+            <SchedulesContainer />
 
             {/* componentDidMount() {
               fetch('http://localhost:3000/users', {
