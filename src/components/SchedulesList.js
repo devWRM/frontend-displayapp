@@ -23,7 +23,7 @@ function SchedulesList(props) {
                             { user.schedules.length ? 
                            
                                 user.schedules.map(schedule =>
-                                    <p>{user.name} "schedule"</p>
+                                    <p key={schedule.id}>{user.name} "schedule"</p>
                                 )
 
                                 : "!NOT!"
