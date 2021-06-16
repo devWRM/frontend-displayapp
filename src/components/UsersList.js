@@ -8,7 +8,7 @@ function UsersList(props) {
         <div>
           
 
-            ALL USERS:
+            <b>ALL USERS (UsersList):</b>
             {
                 props.users.map(user =>
 
