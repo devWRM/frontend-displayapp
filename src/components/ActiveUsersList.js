@@ -1,14 +1,46 @@
 import React from 'react'
 
-function ActiveUsersList() {
-    return (
-        <div>
-            <b>ONLY ACTIVE USERS (ActiveUsersList):</b>
+import { connect } from 'react-redux';
 
-            
+function ActiveUsersList(props) {
+    
+    let activeUsers;
 
-        </div>
-    )
+    if(props.users.length) {
+
+        activeUsers = props.users.filter( user => user.active )
+
+        return (
+            <div>
+                <b>ONLY ACTIVE USERS (ActiveUsersList): total {activeUsers.length}</b>
+                    
+                    { activeUsers.map( user => 
+                                               
+                                <li key={user.id}>
+                                    
+                                   { user.name }
+    
+                                </li>
+                            
+                        )
+                                                    
+                    }
+    
+    
+            </div>
+        )
+
+    } else {
+        return(
+            <div>"There are no users."</div>
+        )
+    }
+
+    
 }
 
-export default ActiveUsersList
+const mapStateToProps = (state) => {
+    return { users: state.users }
+}
+
+export default connect(mapStateToProps)(ActiveUsersList);
