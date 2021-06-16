@@ -10,31 +10,27 @@ function SchedulesList(props) {
     return (
         <div>
 
-            SchedulesList
+            <b>ALL USERS & THEIR SCHEDULE(S) (SchedulesList):</b>
             
             { props.users.length ? 
                  props.users.map(user => 
                     <p key={user.id}>
 
-                            {/* If the user has schedule(s), map the schedules to return user name with each schedule */}
+                            {/* If the user has schedule(s), map the schedules to display user name with each schedule */}
                             { user.schedules.length ? 
                               
                                 user.schedules.map(schedule =>
-                                    <p key={schedule.id}>{user.name} "schedule"</p>
+                                    <p key={schedule.id}>{user.name} - schedule {schedule.dated}</p>
                                 )
 
-                                : <p>{user.name} "!NOT!"</p>
+                                : <p>{user.name} has NO schedules</p>
                             }
                         
-                        
-
                     </p>
                 )
                 // console.log(props.users[0].schedules[0].active) 
-            
-            
-            
-                : "HELLO!!!" 
+                       
+                : "There are no users" 
             }
 
 
@@ -42,8 +38,7 @@ function SchedulesList(props) {
     )
 }
 
-const mapStateToProps = (state) => {
-    
+const mapStateToProps = (state) => {  
     return  { users: state.users }
 }
 
