@@ -11,22 +11,19 @@ function SchedulesList(props) {
         <div>
 
             SchedulesList
-            {/* { props.users.length ? console.log(props.users[0].schedules[0].active) : console.log("HELLO!!!") } */}
-
+            
             { props.users.length ? 
                  props.users.map(user => 
                     <p key={user.id}>
 
-                        {/* { user.schedules[0].active ? "active" : "NOT active" } */}
-
-                         
+                            {/* If the user has schedule(s), map the schedules to return user name with each schedule */}
                             { user.schedules.length ? 
-                           
+                              
                                 user.schedules.map(schedule =>
                                     <p key={schedule.id}>{user.name} "schedule"</p>
                                 )
 
-                                : "!NOT!"
+                                : <p>{user.name} "!NOT!"</p>
                             }
                         
                         
