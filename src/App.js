@@ -3,6 +3,7 @@ import './App.css';
 
 import UsersContainer from './components/UsersContainer.js';
 import SchedulesContainer from './components/SchedulesContainer.js';
+import ActiveUsersContainer from './components/ActiveUsersContainer';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             
 
             <UsersContainer />
+            <ActiveUsersContainer />
             <SchedulesContainer />
 
             {/* componentDidMount() {
