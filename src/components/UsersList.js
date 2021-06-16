@@ -7,8 +7,7 @@ function UsersList(props) {
     return(
         <div>
           
-
-            <b>ALL USERS (UsersList):</b>
+            <b>ALL USERS (UsersList): total {props.users.length}</b>
             {
                 props.users.map(user =>
 
@@ -18,7 +17,6 @@ function UsersList(props) {
                 
                 )
             }
-
 
         </div>
     )
