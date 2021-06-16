@@ -4,8 +4,16 @@ import { connect } from 'react-redux';
 
 function SchedulesList(props) {
 
-// debugger
-//  props.users[0].schedules[0].dated
+    // https://stackoverflow.com/questions/11591854/format-date-to-mm-dd-yyyy-in-javascript
+    function formattedDate(date) {
+        let sliceDate = date.slice(0,10)
+        let splitDate = sliceDate.split("-")
+        let year = splitDate[0];
+        let month = splitDate[1];
+        let day = splitDate[2];
+      
+        return month + '/' + day + '/' + year;
+    }
 
     return (
         <div>
@@ -20,7 +28,7 @@ function SchedulesList(props) {
                             { user.schedules.length ? 
                               
                                 user.schedules.map(schedule =>
-                                    <p key={schedule.id}>{user.name} - schedule {schedule.dated}</p>
+                                    <p key={schedule.id}>{user.name} - schedule {formattedDate(schedule.dated)}</p>
                                 )
 
                                 : <p>{user.name} has NO schedules</p>
