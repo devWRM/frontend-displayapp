@@ -3,7 +3,8 @@ import './App.css';
 
 import UsersContainer from './components/UsersContainer.js';
 import SchedulesContainer from './components/SchedulesContainer.js';
-import ActiveUsersContainer from './components/ActiveUsersContainer';
+import ActiveUsersContainer from './components/ActiveUsersContainer.js';
+import SchedDetailsContainer from './components/SchedDetailsContainer.js';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <UsersContainer />
             <ActiveUsersContainer />
             <SchedulesContainer />
+            <SchedDetailsContainer />
 
             {/* componentDidMount() {
               fetch('http://localhost:3000/users', {
