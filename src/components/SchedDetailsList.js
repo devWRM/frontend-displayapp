@@ -2,6 +2,7 @@ import React from 'react'
 
 import { connect } from 'react-redux';
 import Rooms from './Rooms.js';
+import Cleanings from './Cleanings.js';
 
 function SchedDetailsList(props) {
 
@@ -35,8 +36,10 @@ function SchedDetailsList(props) {
                             
                             user.schedules.map( schedule =>
                                 <li key={schedule.id}>
-                                    {formattedDate(schedule.dated)} 
+                                    {formattedDate(schedule.dated)}
+                                    
                                     <Rooms user={user} schedule={schedule} />
+                                    <Cleanings user={user} schedule={schedule} />
                                 </li>
                                 
                             )
