@@ -20,11 +20,12 @@ function SchedulesList(props) {
 
             <b>ALL USERS & THEIR SCHEDULE(S) (SchedulesList):</b>
             
+            {/* If user(s) exist, map user(s) to detect if user has schedule(s) */}
             { props.users.length ? 
                  props.users.map(user => 
                     <p key={user.id}>
 
-                            {/* If the user has schedule(s), map the schedules to display user name with each schedule */}
+                            {/* If the user has schedule(s), map schedule(s) to display user name with each schedule */}
                             { user.schedules.length ? 
                               
                                 user.schedules.map(schedule =>
